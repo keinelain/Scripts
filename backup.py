@@ -12,7 +12,7 @@ directories = ["/etc", "/home" , "/boot"] #lists directories that need to be bac
 def backupdir(directories): #function to backup the cdirectory
 	os.chdir('/') #change to root directory
 	for directory in directories: #takes list of directories being backed up
-		with tarfile.open(f"{directory}.{datetime.date.today()}.backup.tar.gz" , "w:gz" , verbose= true) as tar: #assigns the directory being backed up .tar.gz to be assigned to variable tar
+		with tarfile.open(f"{directory}.{datetime.date.today()}.backup.tar.gz" , "w:gz" ) as tar: #assigns the directory being backed up .tar.gz to be assigned to variable tar
 			print(f"Creating new tarfile {directory}.{datetime.date.today()}.backup.tar.gz !") 
 			tar.add(directory) #compresses the director in gzip
 			print(f"{directory}.{datetime.date.today()}.backup.tar.gz has been created! Moving to /virtual-drives !")

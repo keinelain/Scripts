@@ -1,3 +1,3 @@
 # Scripts
 
-**Here is a collection of all my scripts**
+**Here is a collection some of my scripts**
